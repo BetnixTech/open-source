@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" type="image/png" href="https://i.imgur.com/zErGueK.png">
+<title>Betnix Tech - Innovative Software Solutions</title>
+<style>
+/* Reset & Basic */
+*{margin:0;padding:0;box-sizing:border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+body{line-height:1.6;color:#333;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+
+/* Navbar */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background-color:#0d1117;color:#fff;position:sticky;top:0;z-index:1000;transition:0.3s;}
+.nav-links{display:flex;gap:2rem;}
+.nav-links li a:hover{color:#00bcd4;transition:0.3s;}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:white;cursor:pointer;}
+
+/* Hero */
+.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(to right,#0d1117,#1f1f1f);color:#fff;position:relative;overflow:hidden;}
+.hero-content h1{font-size:3rem;margin-bottom:1rem;animation:fadeInDown 1s ease;}
+.hero-content p{font-size:1.5rem;margin-bottom:2rem;animation:fadeInUp 1s ease 0.5s;animation-fill-mode:forwards;opacity:0;}
+.btn-primary{padding:.75rem 2rem;background-color:#00bcd4;color:white;border:none;border-radius:5px;cursor:pointer;animation:fadeInUp 1s ease 1s;opacity:0;}
+.btn-primary:hover{background-color:#0097a7;transition:0.3s;}
+
+/* Sections */
+section{padding:5rem 10%;}
+section h2{text-align:center;margin-bottom:2rem;font-size:2.5rem;color:#0d1117;position:relative;animation:fadeIn 1s ease;}
+.card-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+.card{background-color:#f5f5f5;padding:2rem;border-radius:10px;transform:translateY(50px);opacity:0;transition:transform 0.5s,opacity 0.5s;}
+.card.show{transform:translateY(0);opacity:1;}
+
+/* Contact Form */
+.contact form{display:flex;flex-direction:column;gap:1rem;max-width:500px;margin:0 auto;}
+.contact input,.contact textarea{padding:1rem;border:1px solid #ccc;border-radius:5px;width:100%;}
+.contact textarea{resize:vertical;}
+
+/* Footer */
+footer{text-align:center;padding:2rem 10%;background-color:#0d1117;color:white;}
+footer .social-links a:hover{color:#00bcd4;transition:0.3s;}
+
+/* Responsive */
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;background-color:#0d1117;position:absolute;top:60px;right:0;width:100%;}.nav-links.show{display:flex;}.menu-toggle{display:block;}}
+
+/* Animations */
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(50px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{0%{opacity:0;}100%{opacity:1;}}
+</style>
+</head>
+<body>
+
+<header>
+<nav class="navbar">
+    <div class="logo">Betnix</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle">☰</button>
+</nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Innovative Software Solutions</h1>
+        <p>Empowering businesses with cutting-edge technology from our HQ in New York City.</p>
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+    </div>
+</section>
+
+<section id="about">
+<h2>About Betnix</h2>
+<p style="text-align:center;">Betnix is a forward-thinking software company based in New York City. We create robust software solutions, AI platforms, and cross-device connectivity tools for developers and businesses worldwide.</p>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="card-container">
+    <div class="card"> <h3>Custom Software Development</h3> <p>Tailored solutions from web platforms to desktop apps.</p> </div>
+    <div class="card"> <h3>AI & Machine Learning</h3> <p>Leverage AI to automate workflows and improve analytics.</p> </div>
+    <div class="card"> <h3>Cross-Platform Solutions</h3> <p>Ensure your software works seamlessly across devices.</p> </div>
+    <div class="card"> <h3>Consultation & Strategy</h3> <p>Expert guidance for informed software decisions.</p> </div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Our Projects</h2>
+<div class="card-container">
+    <div class="card"><h3>Meridian</h3><p>Advanced Media Mix Modeling tool for advertisers.</p></div>
+    <div class="card"><h3>near</h3><p>Tools enhancing cross-device connectivity for seamless experiences.</p></div>
+    <div class="card"><h3>bnscript & bplx</h3><p>Python projects focused on automation and developer solutions.</p></div>
+    <div class="card"><h3>gme_file_format & python-betnixdata</h3><p>Projects dedicated to file formats and advanced data handling.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<p style="text-align:center;">Headquarters: New York City, USA</p>
+<form id="contactForm">
+<input type="text" placeholder="Your Name" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit" class="btn-primary">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>&copy; 2025 Betnix Tech. All rights reserved.</p>
+<div class="social-links">
+<a href="https://github.com/BetnixTech/">GitHub</a>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+
+// Contact form submission
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for contacting Betnix Tech! We will get back to you soon.');
+    contactForm.reset();
+});
+
+// Scroll animation for cards
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add('show'); }
+    });
+},{threshold:0.1});
+cards.forEach(card => observer.observe(card));
+</script>
+
+</body>
+</html>
